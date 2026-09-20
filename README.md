@@ -68,6 +68,29 @@ This project produces the same EDA work in several useful forms.
 
 ![Bar chart of missing values by variable](docs/images/missing-values.png)
 
+## Technical Modification: Missing-Value Summary
+
+### What I changed
+
+I added a Markdown section and a new code cell to the EDA notebook:
+
+```python
+df.isnull().sum()
+```
+
+### Why I made this change
+
+The missing-value chart provides a visual overview, while this code
+provides an exact column-by-column count. This helps identify
+data-quality issues before further analysis.
+
+### What I observed
+
+The `sex` column has 11 missing values. Four numeric measurement
+columns—`bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, and
+`body_mass_g`—each have 2 missing values. The `species` and `island`
+columns have no missing values.
+
 ## Important Folders and Files
 
 - **docs/** - the project narrative and documentation
