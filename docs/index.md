@@ -1,44 +1,53 @@
-# Project Documentation
+# Restaurant Tips Exploratory Data Analysis
 
-> Use this hosted documentation site to tell your
-> data story. Include a narrative telling your
-> results, observations, and interpretations.
-> Display visuals as needed for a compelling story.
+This project explores restaurant tipping patterns using Seaborn's built-in
+`tips` dataset. The analysis uses Python, pandas, Seaborn, and Jupyter
+notebooks to examine bill totals, tip amounts, meal times, days of the week,
+and party sizes.
 
-## Professional Workflow
+## Research Question
 
-See [**Workflow B: Apply Example Project**](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
-to get a project like this running on your machine.
+How do party size, meal time, and day of the week relate to restaurant tip
+amounts?
 
-## Professional Projects
+## Dataset
 
-- We code like the pros to help us **focus on the analytics**.
-- Most files in this repository will never be touched.
-- If curious about a file, check out the
-  [Professional Python Project Explainer](https://denisecase.github.io/professional-python-project-explainer/).
+The dataset contains 244 restaurant bills and 7 columns. Each row represents
+one restaurant bill and includes the total bill, tip amount, customer
+characteristics, meal time, day of week, and party size.
 
-## Documentation Index
+The data was loaded with Seaborn's built-in `tips` dataset:
 
-- **Home** - this landing page
-- [**Project Instructions**](./project-instructions.md)
-- [**Concepts**](./concepts.md)
-- [**Data Card**](./data-card.md)
-- [**API**](./api.md)
+```python
+sns.load_dataset("tips")
+```
 
-## Additional Project Pages
+## Key Findings
 
-- [**Resources**](./resources.md)
-- [**Seaborn Datasets**](./seaborn-datasets.md)
-- [**Troubleshooting**](./troubleshooting.md)
+* **Data quality:** The dataset has no missing values.
+* **Bills and tips:** Total bill and tip amount have a positive correlation
+  of 0.68.
+* **Typical tip percentage:** The larger groups generally average about 15%
+  to 19%.
+* **Party-size limitation:** Some party sizes have few observations, so they
+  require careful interpretation.
+* **Outliers:** A small number of unusually high tip percentages appear in
+  the data.
 
-## Produced Artifacts
+## Interpretation
 
-- [**Reactive EDA App (marimo)**](./app/)
-- [**Reactive EDA Notebook (marimo)**](https://github.com/denisecase/datafun-04-eda/blob/main/src/datafun/notebook.py)
-- [**Jupyter Notebook**](https://github.com/denisecase/datafun-04-eda/blob/main/notebooks/eda.ipynb)
+Larger restaurant bills generally receive larger tips, although bill total does
+not explain every difference in tipping behavior. Tip percentages are broadly
+similar across the larger meal-time and day-of-week groups. Small group sizes
+and unusual outliers are important limitations when interpreting the results.
 
-## Initial Results
+## Analysis Notebook
 
-![One analyst-selected relationship](./images/one-relationship.png)
+The complete narrated analysis, including tables, charts, observations, and
+next steps, is available in the
+[Restaurant Tips EDA notebook](https://github.com/ShayO47/datafun-04-eda/blob/main/notebooks/eda_shalynne.ipynb).
 
-![Bar chart of missing values by variable](./images/missing-values.png)
+## Next Step
+
+A useful follow-up analysis would build a statistical model of tip percentage
+using bill total, party size, meal time, day of week, and smoker status.

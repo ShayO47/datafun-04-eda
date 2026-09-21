@@ -1,6 +1,5 @@
-# datafun-04-eda
+# Restaurant Tips Exploratory Data Analysis
 
-[![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![uv managed](https://img.shields.io/badge/uv-managed-DE5FE9)](https://docs.astral.sh/uv/)
 [![ty type checked](https://img.shields.io/badge/ty-type_checked-2F80ED)](https://docs.astral.sh/ty/)
@@ -62,6 +61,9 @@ This project produces the same EDA work in several useful forms.
 - [**Jupyter Notebook**](./notebooks/eda.ipynb)
   - view the analysis in the traditional notebook format
 
+- [**Restaurant Tips EDA Notebook**](./notebooks/eda_shalynne.ipynb)
+  - custom Jupyter analysis of restaurant tipping patterns
+
 ## Initial Results
 
 ![One analyst-selected relationship](docs/images/one-relationship.png)
@@ -90,6 +92,28 @@ The `sex` column has 11 missing values. Four numeric measurement
 columns—`bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, and
 `body_mass_g`—each have 2 missing values. The `species` and `island`
 columns have no missing values.
+
+## Restaurant Tips Analysis
+
+This project applies exploratory data analysis techniques to Seaborn's built-in
+`tips` dataset. It examines bill totals, tip amounts, meal times, days of the
+week, and party sizes.
+
+### Key Findings
+
+- The dataset contains 244 restaurant bills and has no missing values.
+- Total bill and tip amount have a positive correlation of 0.68.
+- Larger meal-time and day groups generally average tip percentages from about
+  15% to 19%.
+- A small number of unusually high tip percentages appear as outliers.
+
+### Run the Custom Analysis
+
+Run `uv sync`, then open `notebooks/eda_shalynne.ipynb` in VS Code. Select the
+project's `.venv` kernel and choose **Run All**.
+
+- [Restaurant Tips EDA Notebook](./notebooks/eda_shalynne.ipynb)
+- [Hosted Documentation](https://shayO47.github.io/datafun-04-eda/)
 
 ## Important Folders and Files
 
